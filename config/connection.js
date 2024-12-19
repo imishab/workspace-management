@@ -1,13 +1,12 @@
 const mongoClient = require("mongodb").MongoClient;
-require('dotenv').config(); // Load environment variables
 
 const state = {
   db: null,
 };
 
 module.exports.connect = function (done) {
-  const url = process.env.MONGODB_URI; // Ensure this is the updated connection string
-  const dbname = process.env.MONGODB_DBNAME;
+  const url = 'mongodb+srv://msb:msb.com@workspace.wwkix.mongodb.net/?retryWrites=true&w=majority&appName=workspace'
+  const dbname = 'workspace';
 
   mongoClient.connect(url, { useUnifiedTopology: true }, (err, data) => {
     if (err) {
