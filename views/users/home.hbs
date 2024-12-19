@@ -1,0 +1,289 @@
+<style>
+    .bg-overlay::after {
+        position: absolute;
+        content: '';
+        background-color: #000000b5;
+        opacity: 0.75;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .cu-btn {
+        border-radius: 100px !important;
+    }
+
+    .about-img {
+        border-radius: 20px;
+    }
+
+    .ct-btn {
+        font-size: 11px;
+        border-radius: 50px;
+    }
+
+    .tiny-slider-one-wrapper .single-hero-slide {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 500px !important;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .form-control.form-control-clicked {
+        background-color: hsl(0, 31%, 95%);
+        border-color: #c6c6c6;
+        color: #073984;
+    }
+</style>
+
+<div class="page-content-wrapper">
+    <!-- Welcome Toast -->
+    <div class="toast toast-autohide custom-toast-1 toast-success home-page-toast" role="alert" aria-live="assertive"
+        aria-atomic="true" data-bs-delay="7000" data-bs-autohide="true">
+        <div class="toast-body">
+            <svg class="bi bi-bookmark-check text-white" width="30" height="30" viewBox="0 0 16 16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z">
+                </path>
+                <path fill-rule="evenodd"
+                    d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z">
+                </path>
+            </svg>
+            {{#if user}}
+            <div class="toast-text ms-3 me-2">
+                <p class="mb-1 text-white">Welcome {{user.Fname}}!</p><small class="d-block">Now you can enjoy our every
+                    features</small>
+
+            </div>
+            {{else}}
+            <div class="toast-text ms-3 me-2">
+                <p class="mb-1 text-white">Welcome to CoSpace!</p><small class="d-block">Please Register/Login to
+                    continue with our workspace
+                </small>
+                <a href="/usertype" class="btn btn-dark btn-sm mt-2 w-50">Signin</a>
+            </div>
+            {{/if}}
+
+        </div>
+        <button class="btn btn-close btn-close-white position-absolute p-1" type="button" data-bs-dismiss="toast"
+            aria-label="Close"></button>
+    </div>
+    <!-- Tiny Slider One Wrapper -->
+    <div class="tiny-slider-one-wrapper">
+        <div class="tiny-slider-one">
+            <!-- Single Hero Slide -->
+            <div>
+                <div class="single-hero-slide bg-overlay" style="background-image: url('/images/img/banner-1.png')">
+                    <div class="h-100 d-flex align-items-center text-center">
+                        <div class="container">
+                            <h3 class="text-white mb-1">Welcome To Workspace</h3>
+                            <p class="text-white mb-4">Your Space. Your Success.</p><a
+                                class="btn btn-creative btn-warning btn-lg cu-btn" href="#below">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Hero Slide -->
+            <div>
+                <div class="single-hero-slide bg-overlay" style="background-image: url('/images/img/banner-2.png')">
+                    <div class="h-100 d-flex align-items-center text-center">
+                        <div class="container">
+                            <h3 class="text-white mb-1">On collaboration and community</h3>
+                            <p class="text-white mb-4">"The power of community is a force to be reckoned with."</p><a
+                                class="btn btn-creative btn-warning btn-lg cu-btn" href="#below">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Hero Slide -->
+            <div>
+                <div class="single-hero-slide bg-overlay" style="background-image: url('/images/img/banner-3.png')">
+                    <div class="h-100 d-flex align-items-center text-center">
+                        <div class="container">
+                            <h3 class="text-white mb-1">Collaboration is the Software</h3>
+                            <p class="text-white mb-4">Coworking is the Hardware .
+                            </p><a class="btn btn-creative btn-warning btn-lg cu-btn" href="#below">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Hero Slide -->
+            <div>
+                <div class="single-hero-slide bg-overlay" style="background-image: url('/images/img/banner-4.png')">
+                    <div class="h-100 d-flex align-items-center text-center">
+                        <div class="container">
+                            <h3 class="text-white mb-1">A perfect place to work.</h3>
+                            <p class="text-white mb-4">A perfect place to belong.</p><a
+                                class="btn btn-creative btn-warning btn-lg cu-btn" href="#below">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Hero Slide -->
+            <div>
+                <div class="single-hero-slide bg-overlay" style="background-image: url('/images/img/banner-5.png')">
+                    <div class="h-100 d-flex align-items-center text-center">
+                        <div class="container">
+                            <h3 class="text-white mb-1">Your office is bigger than you think</h3>
+                            <p class="text-white mb-4"></p><a class="btn btn-creative btn-warning btn-lg cu-btn"
+                                href="#below">Get
+                                Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pt-5 pb-4"></div>
+    <div class="container-lg direction-rtl">
+        <div class="row mt-5 mb-5">
+            <div class="col-lg-6">
+                <img src="/images/img/banner-1.png" class="about-img">
+            </div>
+            <div class="col-lg-6 p-5" id="below">
+                <h4 class="mt-2">About Us</h4>
+                <hr width="200px">
+                <p style="padding-right: 50px;">
+                    CoSpace is more than just a coworking platform; it's your one-stop destination for finding and
+                    booking the perfect workspace to suit your unique needs. As one of the fastest-growing platforms in
+                    the industry, CoSpace offers a curated selection of workspaces equipped with modern amenities
+                    designed to inspire productivity and collaboration.
+
+
+
+                </p>
+                <a href="/about" class="btn btn-creative btn-dark mt-2 btn-lg ct-btn">Learn
+                    More</a>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <section class="p-5" style="background-color: rgb(244 244 244);" id="elementsSearchList">
+        <div class="container-lg">
+            <h3 class="text-center mt-4">Our Popular Workspaces</h3>
+            <p class="text-center mb-4">"Find Your Ideal Workspace to Elevate Your Work Experience" </p>
+            <div class="card mb-4 w-100">
+                <div class="card-body w-100">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="form-group mb-0 w-100">
+                            <input class="form-control form-control-clicked" id="elementsSearchInput" type="text"
+                                onkeyup="elementsSearch()" placeholder="Search For Workspace...">
+                        </div>
+                        <div class="d-flex gap-2">
+                            {{!-- <a href="" class="btn btn-dark"><i class="bi bi-filter"></i></a>
+                            <a href="" class="btn btn-dark"><i class="bi bi-sort-alpha-down"></i></a> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-3 ">
+            <!-- Single Top Product Card -->
+            {{#each workspaces}}
+            <div class="col-6 col-sm-4 col-lg-4">
+                <a href="/single-workspace/{{this._id}}">
+                    <div class="card single-product-card">
+                        <div class="card-body p-3">
+                            <!-- Product Thumbnail -->
+                            <a class="product-thumbnail d-block" href="#!">
+                                <img src="/images/workspace-images/{{this._id}}.png" alt="">
+                                <!-- Badge -->
+                                <span class="badge bg-dark">{{this.bname}}</span>
+                            </a>
+                            <!-- Product Title -->
+                            <a class="product-title d-block text-truncate" href="#!">{{this.wname}}</a>
+                            <!-- Product Price -->
+                            <p class="sale-price">Rs.{{this.Price}} </p>
+                            <p>Available seat : {{this.seat}}</p>
+                            <p>{{this.baddress}}</p>
+                            <a href="/single-workspace/{{this._id}}"
+                                class="ct-btn btn btn2 btn-sm btn-outline-dark d-none d-md-inline-block">View
+                                Details</a>
+
+                            <button class="btn btn-creative btn-dark btn-lg ct-btn buy-now" data-id="{{this._id}}"
+                                data-seats="{{this.seat}}">Buy Now</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {{/each}}
+
+
+
+
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const buyNowButtons = document.querySelectorAll('.buy-now');
+
+                buyNowButtons.forEach(button => {
+                    const seatsAvailable = parseInt(button.getAttribute('data-seats'), 10);
+
+                    if (seatsAvailable === 0) {
+                        button.disabled = true; // Disable the button if sold out
+                        button.textContent = 'Sold Out'; // Change the button text
+                        button.classList.add('disabled'); // Optionally add a disabled class for styling
+                    } else {
+                        button.addEventListener('click', function () {
+                            buyNow(button.getAttribute('data-id')); // Call the buyNow function
+                        });
+                    }
+                });
+            });
+
+            function buyNow(workspaceId) {
+                // Your buy now logic here, for example:
+                alert('Buying workspace with ID: ' + workspaceId);
+                // Implement your purchase logic (e.g., make an API call)
+            }
+        </script>
+
+        <script>
+            function elementsSearch() {
+                var input = document.getElementById('elementsSearchInput');
+                var filter = input.value.toUpperCase();
+                var list = document.getElementById("elementsSearchList");
+                var listItem = list.getElementsByClassName('col-6');
+
+                for (i = 0; i < listItem.length; i++) {
+                    var a = listItem[i];
+                    var textValue = a.textContent || a.innerText;
+                    if (textValue.toUpperCase().indexOf(filter) > -1) {
+                        listItem[i].style.display = "";
+                    } else {
+                        listItem[i].style.display = "none";
+                    }
+                }
+            }
+
+        </script>
+        <script>
+            function buyNow(workspaceId) {
+                window.location.href = '/place-order/' + workspaceId;
+            }
+
+        </script>
+</div>
+</section>
+
+</div>
+<div class="container-lg">
+    <div class="card card-bg-img bg-dark bg-overlay mb-3" style="background-image: url('img/bg-img/3.jpg')">
+        <div class="card-body direction-rtl p-5">
+            <h2 class="text-white">Thank You For Using<br> Our Workspace</h2>
+            <p class="mb-4 mt-3 text-white">We appreciate you choosing us for your work needs. Looking forward to seeing
+                you again soon! </p>
+            {{!-- <a class="btn btn-warning" href="elements.html">All
+                elements</a> --}}
+        </div>
+    </div>
+</div>
+<div class="pb-3"></div>
+</div>
